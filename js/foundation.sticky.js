@@ -62,7 +62,7 @@ class Sticky extends Plugin {
     this.isStuck = false;
     $(window).one('load.zf.sticky', function(){
       //We calculate the container height to have correct values for anchor points offset calculation.
-      _this.containerHeight = _this.$element.css("display") == "none" ? 0 : _this.$element[0].getBoundingClientRect().height;
+      _this.containerHeight = _this.$element.css('display') == 'none' ? 0 : _this.$element[0].getBoundingClientRect().height;
       _this.$container.css('height', _this.containerHeight);
       _this.elemHeight = _this.containerHeight;
       if(_this.options.anchor !== ''){
@@ -89,8 +89,8 @@ class Sticky extends Plugin {
    * @private
    */
   _parsePoints() {
-    var top = this.options.topAnchor == "" ? 1 : this.options.topAnchor,
-        btm = this.options.btmAnchor== "" ? document.documentElement.scrollHeight : this.options.btmAnchor,
+    var top = this.options.topAnchor == '' ? 1 : this.options.topAnchor,
+        btm = this.options.btmAnchor== '' ? document.documentElement.scrollHeight : this.options.btmAnchor,
         pts = [top, btm],
         breaks = {};
     for (var i = 0, len = pts.length; i < len && pts[i]; i++) {
@@ -255,7 +255,7 @@ class Sticky extends Plugin {
                   * @event Sticky#stuckto
                   */
                  .trigger(`sticky.zf.stuckto:${stickTo}`);
-    this.$element.on("transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd", function() {
+    this.$element.on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', function() {
       _this._setSizes();
     });
   }
@@ -326,7 +326,7 @@ class Sticky extends Plugin {
     });
 
     var newContainerHeight = this.$element[0].getBoundingClientRect().height || this.containerHeight;
-    if (this.$element.css("display") == "none") {
+    if (this.$element.css('display') == 'none') {
       newContainerHeight = 0;
     }
     this.containerHeight = newContainerHeight;

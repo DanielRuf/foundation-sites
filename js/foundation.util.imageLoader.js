@@ -24,7 +24,7 @@ function onImagesLoaded(images, callback){
       // If the above check failed, simulate loading on detached element.
       var image = new Image();
       // Still count image as loaded if it finalizes with an error.
-      var events = "load.zf.images error.zf.images";
+      var events = 'load.zf.images error.zf.images';
       $(image).one(events, function me(event){
         // Unbind the event listeners. We're using 'one' but only one of the two events will have fired.
         $(this).off(events, me);

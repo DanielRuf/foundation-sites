@@ -189,8 +189,8 @@ class Reveal extends Plugin {
   _disableScroll(scrollTop) {
     scrollTop = scrollTop || $(window).scrollTop();
     if ($(document).height() > $(window).height()) {
-      $("html")
-        .css("top", -scrollTop);
+      $('html')
+        .css('top', -scrollTop);
     }
   }
 
@@ -201,8 +201,8 @@ class Reveal extends Plugin {
   _enableScroll(scrollTop) {
     scrollTop = scrollTop || parseInt($("html").css("top"));
     if ($(document).height() > $(window).height()) {
-      $("html")
-        .css("top", "");
+      $('html')
+        .css('top', '');
       $(window).scrollTop(-scrollTop);
     }
   }
@@ -409,7 +409,7 @@ class Reveal extends Plugin {
       // Get the current top before the modal is closed and restore the scroll after.
       // TODO: use component properties instead of HTML properties
       // See https://github.com/zurb/foundation-sites/pull/10786
-      var scrollTop = parseInt($("html").css("top"));
+      var scrollTop = parseInt($('html').css('top'));
 
       if ($('.reveal:visible').length  === 0) {
         _this._removeRevealOpenClasses(); // also remove .is-reveal-open from the html element when there is no opened reveal
@@ -590,7 +590,7 @@ Reveal.defaults = {
    * @type {string}
    * @default "body"
    */
-  appendTo: "body",
+  appendTo: 'body',
   /**
    * Allows adding additional class names to the reveal overlay.
    * @option

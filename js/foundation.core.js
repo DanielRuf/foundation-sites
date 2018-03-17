@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 import $ from 'jquery';
 import { GetYoDigits } from './foundation.util.core';
@@ -157,7 +157,7 @@ var Foundation = {
             opts = {};
         // Don't double-dip on plugins
         if ($el.data('zfPlugin')) {
-          console.warn("Tried to initialize "+name+" on an element that already has a Foundation plugin.");
+          console.warn('Tried to initialize '+name+' on an element that already has a Foundation plugin.');
           return;
         }
 
@@ -313,7 +313,7 @@ function functionName(fn) {
   if (Function.prototype.name === undefined) {
     var funcNameRegex = /function\s([^(]{1,})\(/;
     var results = (funcNameRegex).exec((fn).toString());
-    return (results && results.length > 1) ? results[1].trim() : "";
+    return (results && results.length > 1) ? results[1].trim() : '';
   }
   else if (fn.prototype === undefined) {
     return fn.constructor.name;

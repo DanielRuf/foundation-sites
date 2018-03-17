@@ -108,7 +108,7 @@ class OffCanvas extends Plugin {
     // Add an overlay over the content if necessary
     if (this.options.contentOverlay === true) {
       var overlay = document.createElement('div');
-      var overlayPosition = $(this.$element).css("position") === 'fixed' ? 'is-overlay-fixed' : 'is-overlay-absolute';
+      var overlayPosition = $(this.$element).css('position') === 'fixed' ? 'is-overlay-fixed' : 'is-overlay-absolute';
       overlay.setAttribute('class', 'js-off-canvas-overlay ' + overlayPosition);
       this.$overlay = $(overlay);
       if(overlayPosition === 'is-overlay-fixed') {

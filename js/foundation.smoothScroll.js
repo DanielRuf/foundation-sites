@@ -89,7 +89,7 @@ class SmoothScroll extends Plugin {
             options.animationDuration,
             options.animationEasing,
             function() {
-                if(callback && typeof callback == "function"){
+                if(callback && typeof callback == 'function'){
                     callback();
                 }
             }

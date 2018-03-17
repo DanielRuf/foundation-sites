@@ -93,7 +93,7 @@ class Magellan extends Plugin {
       _this._updateActive();
     });
 
-    if (document.readyState === "complete") {
+    if (document.readyState === 'complete') {
       _this.$element.on({
         'resizeme.zf.trigger': _this.reflow.bind(_this),
         'scrollme.zf.trigger': _this._updateActive.bind(_this)

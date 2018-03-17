@@ -128,10 +128,10 @@ class Slider extends Plugin {
     var pctOfBar = percent(value - this.options.start, this.options.end - this.options.start)
 
     switch(this.options.positionValueFunction) {
-    case "pow":
+    case 'pow':
       pctOfBar = this._logTransform(pctOfBar);
       break;
-    case "log":
+    case 'log':
       pctOfBar = this._powTransform(pctOfBar);
       break;
     }
@@ -146,10 +146,10 @@ class Slider extends Plugin {
   */
   _value(pctOfBar) {
     switch(this.options.positionValueFunction) {
-    case "pow":
+    case 'pow':
       pctOfBar = this._powTransform(pctOfBar);
       break;
-    case "log":
+    case 'log':
       pctOfBar = this._logTransform(pctOfBar);
       break;
     }

@@ -101,10 +101,10 @@ class Drilldown extends Plugin {
           $back = $menu.find('.js-drilldown-back');
       if(!$back.length){
         switch (_this.options.backButtonPosition) {
-          case "bottom":
+          case 'bottom':
             $menu.append(_this.options.backButton);
             break;
-          case "top":
+          case 'top':
             $menu.prepend(_this.options.backButton);
             break;
           default:

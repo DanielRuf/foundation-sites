@@ -16,7 +16,10 @@ matrix:
   - node_js: "stable"
     env: ZF_TRAVIS_COMMAND=test:javascript:browserstack
 
-before_install: npm install -g npm@latest
+before_install:
+  - npm install -g npm@latest
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then iex (new-object net.webclient).downloadstring('https://get.scoop.sh'); fi
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then scoop install curl; fi
 install: npm ci
 script: npm run $ZF_TRAVIS_COMMAND
 

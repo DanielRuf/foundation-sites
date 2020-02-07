@@ -4,7 +4,7 @@ import $ from 'jquery';
 import { Plugin } from './foundation.core.plugin';
 import { onLoad, GetYoDigits } from './foundation.core.utils';
 import { Keyboard } from './foundation.util.keyboard';
-
+test
 /**
  * Accordion module.
  * @module foundation.accordion
